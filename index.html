@@ -1,125 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto Trasmilenio</title>
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <script src="js/script.js"></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="sidebar">
-        <h2>
-          <i class="fas fa-bus-alt" onclick="main(4)"></i>Proyecto Trasmilenio
-        </h2>
-        <ul>
-          <li>
-            <a href="#" onclick="main(1)"><i class="fas fa-file-alt"></i>Archivos carga</a>
-          </li>
-          <li>
-            <a href="#" onclick="main(2)"><i class="fas fa-folder-open"></i>Archivos Uso</a>
-          </li>
-          <li class="li1">
-              <div class="dropdown">
-                <a href="#" onclick="main(3)" ><i class="fas fa-file-archive"></i>Salidas</a>
-                <div class="dropdown-content">
-                    <a href="#">salida 1</a>
-                    <a href="#">salida 2</a>
-                    <a href="#">salida 3</a>
-                    <a href="#">salida 4</a>
-                    <a href="#">salida 5</a>
-                    <a href="#">salida 6</a>
-                    <a href="#">salida 7</a>
-                    <a href="#">salida 8</a>
-                </div>
-              </div>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-mail-bulk"></i>Generar Archivos</a>
-          </li>
-          <li>
-            <a href="#" onclick="main(5)"><i class="fas fa-edit"></i>CRUD</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Proyecto Trasmilenio</title>
+        <link rel="stylesheet" href="css/main.css" type="text/css" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <script src="js/scripts.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <h2>
+                    <i class="fas fa-bus-alt" onclick="main(4)"></i>Proyecto Trasmilenio
+                </h2>
+                <ul>
+                    <li>
+                        <a href="#" onclick="main(1)"><i class="fas fa-file-alt"></i>Archivos carga</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="main(2)"><i class="fas fa-folder-open"></i>Archivos Uso</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" onclick="main(3)" ><i class="fas fa-file-archive"></i>Salidas</a>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="main2(1)">Ultimo saldo de la tarjeta</a>
+                                <a href="#" onclick="main()">Saldo del año de la tarjeta</a>
+                                <a href="#" onclick="main()">Saldo real de la tarjeta</a>
+                                <a href="#" onclick="main()">Saldos por mes</a>
+                                <a href="#" onclick="main()">Transaciones por tarjeta</a>
+                                <a href="#" onclick="main()">transaciones por mes</a>
+                                <a href="#" onclick="main()">Tarjetas procesadas por mes</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-mail-bulk"></i>Generar Archivos</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="main(5)"><i class="fas fa-edit"></i>CRUD</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-    <div class="primary-content" id="primary" style="display: block">
-      <img src="img/logo.png" alt="" />
-      <h1>Universidad Pedagógica Y Tecnologica de Colombia</h1>
-      <h2>
-        Estudiantes: <br />
-        Cristian <br />
-        edson
-      </h2>
-      <h2>Especialización</h2>
-      <h2>2020</h2>
-    </div>
+        <div class="primary-content" id="primary" style="display: block">
+            <img src="img/logo.png" alt="" />
+            <h1>Universidad Pedagógica Y Tecnologica de Colombia</h1>
+            <h2>
+                Estudiantes: <br />
+                Cristian <br />
+                edson
+            </h2>
+            <h2>Especialización</h2>
+            <h2>2020</h2>
+        </div>
 
-    <div class="main_content" id="contenido" style="display: none">
-      <div class="title">Generar archivos de carga</div>
-      <div class="custom-select">
-        <h2>Seleccione mes</h2>
-        <select class="select-option">
-          <option class="option" value="">Enero</option>
-          <option value="">Febrero</option>
-          <option value="">Marzo</option>
-          <option value="">Abril</option>
-          <option value="">Mayo</option>
-          <option value="">Junio</option>
-          <option value="">Julio</option>
-          <option value="">Agosto</option>
-          <option value="">Septiembre</option>
-          <option value="">Octubre</option>
-          <option value="">Noviembre</option>
-          <option value="">Diciembre</option>
-        </select>
-        <button class="button" onclick="cargarAleatorios(1)">Cargar</button>
-      </div>
+        <div class="main_content" id="contenido" style="display: none">
+            <div class="title">Generar archivos de carga</div>
+            <div class="custom-select">
+                <h2>Seleccione mes</h2>
+                <select class="select-option" id="mesesCarga">
+                    <option class="option" value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+                <button class="button" onclick="cargarAleatorios()" id="btnCarga">Cargar</button>
+            </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Numero Tarjeta</th>
-            <th id="th">Ultima Carga</th>
-            <th>Saldo Final</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>123456789</td>
-            <td>123456789</td>
-            <td>123456789</td>
-          </tr>
-          <tr>
-            <td>123456789</td>
-            <td>123456789</td>
-            <td>123456789</td>
-          </tr>
-          <tr>
-            <td>123456789</td>
-            <td>123456789</td>
-            <td>123456789</td>
-          </tr>
-          <tr>
-            <td>123456789</td>
-            <td>123456789</td>
-            <td>123456789</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Numero Tarjeta</th>
+                        <th id="th">Ultima Carga</th>
+                        <th>Saldo Final</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>123456789</td>
+                        <td>123456789</td>
+                        <td>123456789</td>
+                    </tr>
+                    <tr>
+                        <td>123456789</td>
+                        <td>123456789</td>
+                        <td>123456789</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-    <div class="main_content" id="contenido2" style="display: none">
-      hola mundo
-    </div>
+        <div class="main_content" id="contenido2" style="display: none">
+            <div class="title">Generar archivos de Uso</div>
+            <div class="custom-select">
+                <h2>Seleccione mes</h2>
+                <select class="select-option" id="mesesUso">
+                    <option class="option" value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+                <button class="button" onclick="usoAleatorios()" id="btnUso">Cargar</button>
+            </div>
 
-    <div class="crud" id="crud" style="display: none">
-        <h2>Número de Tarjeta</h2>
-        <input type="text">
-        <button>Consultar</button>
-    </div>
-  </body>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Numero Tarjeta</th>
+                        <th>Ultima Uso</th>
+                        <th>Saldo Final</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>hola</td>
+                        <td>123456789</td>
+                        <td>123456789</td>
+                    </tr>
+                    <tr>
+                        <td>hola</td>
+                        <td>123456789</td>
+                        <td>123456789</td>
+                    </tr>
+                    <tr>
+                        <td>hola</td>
+                        <td>123456789</td>
+                        <td>123456789</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="crud" id="crud" style="display: none">
+            <h2>Número de Tarjeta</h2>
+            <input type="text">
+            <button>Consultar</button>
+        </div>
+
+        <div class="salida1"  id="salida1" style="display: none" >
+            <h2>Numero de la tarjeta</h2>
+            Hola mundo
+        </div>
+
+        <script src="js/script.js"></script>
+
+    </body>
 </html>
+
