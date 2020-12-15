@@ -1,0 +1,61 @@
+.salida1 {
+    margin-left: 300px;
+    margin-top: 50px;
+}
+.salida1 input {
+    margin-left:  20px;
+    padding: 5px 30px;
+    text-align: center;
+}
+
+.salida1 h1 {
+    margin-left: 280px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    color: #2D4962;
+}
+
+.salida1 h2{
+    font-size: 23px;
+    color: #2D4962;
+}
+.salida1 button{
+    padding: 4px 15px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: white;
+    background-color: #2D4962;
+    border: none;
+    box-shadow: 0px 2px 6px rgb(0, 0, 0.6);
+}
+
+.salida1 button:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0.8);
+}
+
+.salida1 label {
+    margin-left: 20px;
+    font-size: 25px;
+
+}
+
+
+.container {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.tableFechas th,td{
+    font-weight: normal;
+    margin: 0;
+    max-width: 12.5vw; /**Ancho por celda*/
+    min-width: 160px;/**Ancho por celda*/
+    word-wrap: break-word;/*Si el contenido supera el tamano, adiciona a una nueve linea**/
+    font-size: 16px;
+    height: 16px!important;/*El mismo alto para todas las celdas**/
+    padding: 8px;
+    border: 1px solid #556777;
+ 
+}
